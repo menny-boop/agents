@@ -72,7 +72,7 @@ Hi [Prospect First Name],
 
 A few items from the call:
 
-1. <https://www.nilus.com/blog/|Nilus Blog>
+1. <https://www.nilus.com/blog/|Nilus Blog> - success stories from companies of similar shape and complexity to [Company Name].
 2. *Nilus Factsheet* (attached) - a quick overview of the platform and what we cover.
 
 *To recap where we landed:* [2-3 sentence summary written in Menny's voice — conversational, specific, referencing actual systems and pain points from the call. Not generic. Example style: "The foundation is improving cash reconciliation. Right now, AR comes from [System A], AP from [System B], and payroll directly from banking portals because the ERP sync lags. That fragmentation makes forecasts unreliable and forces you to idle cash across entities."]
