@@ -55,6 +55,7 @@ Then move on.
 - **Systems/tools mentioned** — e.g., NetSuite, Coupa, Salesforce, banking portals, ERPs, etc.
 - **Agreed-upon next meeting date, time, and timezone** — scan the transcript for any agreed date. Look for phrases like "let's meet on...", "I'll send a calendar invite for...", "how about [day]...", "does [date] work", etc. If no specific date was agreed, use "[date TBD]"
 - **Any documents mentioned** — NDAs, factsheets, or other items the prospect agreed to send or receive
+- **Personal moment** — scan the rapport section at the start of the call for any personal context: are they in quarter close, did they take the call during a holiday or busy period, did they mention something personal (travel, a team event, a tough week)? Extract the most genuine, specific detail. If nothing personal was found, leave blank.
 
 ### 3c. Generate the follow-up email draft
 
@@ -67,7 +68,7 @@ Use this exact template with Slack formatting. Fill every [bracketed field] with
 
 Hi [Prospect First Name],
 
-Really enjoyed the candid conversation today. Great to finally reconnect and get into the details of where things stand and where you'd like to take them.
+[Two short sentences max. First: genuinely thank them for the open and candid conversation. Second: if a personal moment was found (quarter close, holiday, busy period, anything they mentioned in the rapport section), acknowledge it specifically — e.g. "Really appreciate you making time especially with quarter close this week." If nothing personal was found, skip the second sentence entirely. Never fabricate personal details.]
 
 A few items from the call:
 
