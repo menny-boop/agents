@@ -54,7 +54,7 @@ Every call Menny runs should have a clear Purpose, Plan, and Outcome. Evaluate e
 
 ## SLACK MESSAGE FORMAT (one per call)
 
-🎙️ *Coachy here* — **[Prospect Name | Company | Date/Time]**
+*🎙️ Coachy — [Full Gong call title] | [Date/Time]*
 
 *Honest take:* [1 brutally honest sentence about how the call went overall — no softening]
 
