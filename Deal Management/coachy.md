@@ -1,7 +1,7 @@
 # coachy
 
 **Routine ID:** `trig_01858dNxv8DDhfvR49uKDQJV`
-**Schedule:** `0 */2 * * *` — every 2 hours
+**Schedule:** `0 5 * * *` — every day at 8am Jerusalem (5am UTC)
 **MCP connections:** Gong, Slack
 **Model:** claude-sonnet-4-6
 
