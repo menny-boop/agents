@@ -46,22 +46,21 @@ Call out the exact moment in the call where he dropped the ball. Quote him if po
 
 ## SLACK MESSAGE FORMAT (one per call)
 
-🎙️ *Coachy here* — MEDDPICC debrief for **[Prospect Name | Company | Date/Time]**
+🎙️ *Coachy here* — **[Prospect Name | Company | Date/Time]**
 
 *Honest take:* [1 brutally honest sentence about how the call went overall — no softening]
 
-*What you actually got right:*
-✅ [Criterion] — [specific note, max 1 line]
+*What went well:*
+• [Specific thing Menny did well — reference the actual moment, quote him if possible]
+• [Add more bullets if warranted, skip if nothing deserves it]
 
-*Where you left deals on the table:*
-❌ [Criterion] — [exactly what's missing, why it costs you, and the specific question you should have asked — be explicit]
-⚠️ [Criterion] — [what was partial, what a better version of that moment looks like]
+*What was crap:*
+• [Specific failure — what happened, why it costs him, quote the exact moment]
+• [Each bullet is one distinct thing he dropped the ball on — be explicit, no softening]
 
-*The one thing that would have made this call 2x more valuable:*
-→ [Single most important missed opportunity — be specific, not generic]
-
-*MEDDPICC score: X/8*
-[One unfiltered coaching line — name the pattern, name the habit that needs to change]
+*Guidance for next calls:*
+• [Concrete, actionable instruction — not generic advice. "Next time X happens, say Y" level of specificity]
+• [Add a bullet for each pattern worth fixing]
 
 ## NILUS CONTEXT
 
