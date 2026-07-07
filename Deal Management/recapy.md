@@ -61,7 +61,9 @@ Then move on.
 Use this exact template with Slack formatting. Fill every [bracketed field] with the extracted details:
 
 ---
-📧 *Follow-up Draft* | [Company Name] — [Call Title]
+*Subject:* [Company Name] | Nilus - [Call Title] Recap & Next Steps
+
+📧 *Follow-up Draft*
 
 Hi [Prospect First Name],
 
