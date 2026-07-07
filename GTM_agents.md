@@ -10,9 +10,9 @@ All agents are managed via [claude.ai/code/routines](https://claude.ai/code/rout
 
 | Agent | File | Schedule | What it does |
 |-------|------|----------|--------------|
-| [recapy](./recapy.md) | `recapy.md` | 8am, 11am, 2pm, 5pm, 8pm UTC | Scans Gong for new calls → generates follow-up email drafts → DMs to Slack |
-| [coachy](./coachy.md) | `coachy.md` | Every 2 hours | Reviews Gong calls → scores against MEDDPICC → DMs brutal coaching feedback to Slack |
-| [slacky](./slacky.md) | `slacky.md` | Every hour | Scans all Slack channels/DMs → distills last 60 min → DMs a crisp summary |
+| [recapy](./Deal%20Management/recapy.md) | `Deal Management/recapy.md` | 8am, 11am, 2pm, 5pm, 8pm UTC | Scans Gong for new calls → generates follow-up email drafts → DMs to Slack |
+| [coachy](./Deal%20Management/coachy.md) | `Deal Management/coachy.md` | Every 2 hours | Reviews Gong calls → scores against MEDDPICC → DMs brutal coaching feedback to Slack |
+| [slacky](./Deal%20Management/slacky.md) | `Deal Management/slacky.md` | Every hour | Scans all Slack channels/DMs → distills last 60 min → DMs a crisp summary |
 
 ---
 
