@@ -68,14 +68,14 @@ Use this exact template with Slack formatting. Fill every [bracketed field] with
 
 Hi [Prospect First Name],
 
-[Two short sentences max. First: genuinely thank them for the open and candid conversation. Second: if a personal moment was found (quarter close, holiday, busy period, anything they mentioned in the rapport section), acknowledge it specifically — e.g. "Really appreciate you making time especially with quarter close this week." If nothing personal was found, skip the second sentence entirely. Never fabricate personal details.]
+[Two short sentences max. First: genuinely thank them for the open and candid conversation. Second: if a personal moment was found (quarter close, holiday, busy period, anything they mentioned in the rapport section), acknowledge it specifically - e.g. "Really appreciate you making time especially with quarter close this week." If nothing personal was found, skip the second sentence entirely. Never fabricate personal details.]
 
 A few items from the call:
 
 1. <https://www.nilus.com/blog/|Nilus Blog> - success stories from companies of similar shape and complexity to [Company Name].
 2. *Nilus Factsheet* (attached below) - a quick overview of the platform and what we cover.
 
-*To recap where we landed:* [2-3 sentence summary written in Menny's voice — conversational, specific, referencing actual systems and pain points from the call. Not generic. Example style: "The foundation is improving cash reconciliation. Right now, AR comes from [System A], AP from [System B], and payroll directly from banking portals because the ERP sync lags. That fragmentation makes forecasts unreliable and forces you to idle cash across entities."]
+*To recap where we landed:* [2-3 sentence summary written in Menny's voice - conversational, specific, referencing actual systems and pain points from the call. Not generic. Example style: "The foundation is improving cash reconciliation. Right now, AR comes from [System A], AP from [System B], and payroll directly from banking portals because the ERP sync lags. That fragmentation makes forecasts unreliable and forces you to idle cash across entities."]
 
 *Next Steps:*
 I've sent over the calendar invite for *[agreed next meeting date/time]*. For that session, if you can have [relevant systems mentioned] open, we'll spend the time mapping out your workflows together with one of our solution engineers to ensure we're fully prepared for a tailored demo built around your specific processes and priorities.
@@ -88,7 +88,7 @@ Menny
 
 _Gong call ID: [call ID] | Auto-generated: [current timestamp]_
 
-📎 *Attachment reminder:* Nilus Factsheet 2026 — attach before sending.
+📎 *Attachment reminder:* Nilus Factsheet 2026 - attach before sending.
 ---
 
 ### 3d. Post to Menny's Slack DM
@@ -105,4 +105,5 @@ Then use `slack_send_message` to send the draft as a DM to Menny.
 - Keep Menny's voice casual, specific, and story-driven — never generic boilerplate.
 - The Nilus blog link must always be a clickable hyperlink, never plain text.
 - Bold formatting in Slack uses *asterisks*, not **double asterisks**.
+- Never use em dashes (—) anywhere in the message. Use a regular hyphen (-) instead.
 - The Gong call ID embedded in each message serves as the dedup marker — always include it exactly as: `_Gong call ID: [call ID] | Auto-generated: [timestamp]_`
