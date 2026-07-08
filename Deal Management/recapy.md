@@ -54,8 +54,8 @@ Then move on.
 - **Core pain points and goals** — the key challenges discussed, written in 2-3 sentences, specific to what was actually said (reference systems, workflows, team structures mentioned)
 - **Systems/tools mentioned** — e.g., NetSuite, Coupa, Salesforce, banking portals, ERPs, etc.
 - **Agreed-upon next meeting date, time, and timezone** — scan the transcript for any agreed date. Look for phrases like "let's meet on...", "I'll send a calendar invite for...", "how about [day]...", "does [date] work", etc. If no specific date was agreed, use "[date TBD]"
-- **Any documents mentioned** — NDAs, factsheets, or other items the prospect agreed to send or receive
-- **Personal moment** — scan the rapport section at the start of the call for any personal context: are they in quarter close, did they take the call during a holiday or busy period, did they mention something personal (travel, a team event, a tough week)? Extract the most genuine, specific detail. If nothing personal was found, leave blank.
+- **Personal moment** - scan the rapport section at the start of the call for any personal context: are they in quarter close, did they take the call during a holiday or busy period, did they mention something personal (travel, a team event, a tough week)? Extract the most genuine, specific detail. If nothing personal was found, leave blank.
+- **Items needed from prospect** - scan the full transcript for anything the prospect needs to send, complete, or action before the next meeting. Examples: NDA, security questionnaire, workflow assessment, internal intro, data access, budget confirmation. List each item explicitly. If nothing was mentioned, leave blank.
 
 ### 3c. Generate the follow-up email draft
 
@@ -80,8 +80,11 @@ A few items from the call:
 *Next Steps:*
 I've sent over the calendar invite for *[agreed next meeting date/time]*. For that session, if you can have [relevant systems mentioned] open, we'll spend the time mapping out your workflows together with one of our solution engineers to ensure we're fully prepared for a tailored demo built around your specific processes and priorities.
 
-[ONLY include this line if an NDA or document exchange was mentioned in the transcript:]
-Please send over [Company Name]'s NDA ahead of the call so we can sign it in advance and have a more open discussion around your data and workflows during the meeting.
+[ONLY include this section if items were needed from the prospect - otherwise omit entirely:]
+To keep things moving on our end, a few things I'll need from you:
+- [Item 1 - short and specific, e.g. "Your NDA so we can sign before the next call"]
+- [Item 2 - e.g. "A completed workflow assessment ahead of the demo"]
+- [Add only what was actually discussed - never fabricate]
 
 Best,
 Menny
