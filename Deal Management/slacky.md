@@ -22,50 +22,32 @@ Store both — use the Unix timestamp as `oldest` for slack_read_channel calls, 
 
 Also compute the start of the 2-hour window in human-readable form (e.g. "09:00–11:00 IDT") for use in the message header.
 
-## Step 2 — Dynamically discover ALL channels and DMs
+## Step 2 — Discover channels and DMs Menny is a member of
 
-Run ALL of these searches in parallel to collect every channel ID Menny is active in. Extract the channel_id from every result.
+Run these searches in parallel. Only include channels Menny is actually a member of or DMs he is part of.
 
 **Search A — channels where Menny was mentioned (today):**
 slack_search_public_and_private:
 - query: "<@U07P42N37HV>"
 - after: (today's date)
 - channel_types: "public_channel,private_channel,im,mpim"
-- sort: timestamp, sort_dir: desc, limit: 20
+- sort: timestamp, sort_dir: desc, limit: 50
 
 **Search B — channels where Menny has posted (today):**
 slack_search_public_and_private:
 - query: "from:<@U07P42N37HV>"
 - after: (today's date)
 - channel_types: "public_channel,private_channel,im,mpim"
-- sort: timestamp, sort_dir: desc, limit: 20
+- sort: timestamp, sort_dir: desc, limit: 50
 
-**Search C — broad sweep of all recent activity across all channel types:**
+**Search C — all DMs sent to Menny (today):**
 slack_search_public_and_private:
-- query: "nilus"
-- after: (today's date)
-- channel_types: "public_channel,private_channel,im,mpim"
-- sort: timestamp, sort_dir: desc, limit: 20
-
-**Search D — all DMs and group DMs (im + mpim sweep):**
-slack_search_public_and_private:
-- query: "the"
+- query: "to:<@U07P42N37HV>"
 - after: (today's date)
 - channel_types: "im,mpim"
-- sort: timestamp, sort_dir: desc, limit: 20
+- sort: timestamp, sort_dir: desc, limit: 50
 
-**Also — discover any new private/deal channels:**
-slack_search_channels:
-- query: "internal"
-- channel_types: "private_channel"
-- limit: 20
-
-slack_search_channels:
-- query: ""
-- channel_types: "public_channel,private_channel"
-- limit: 20
-
-**Collect all unique channel IDs** from every search result above. De-duplicate. This is your dynamic channel list.
+**Collect all unique channel IDs** from every search result above. De-duplicate. This is your channel list — do not read any channel not returned here.
 
 ## Step 3 — Read every discovered channel
 
@@ -78,41 +60,24 @@ slack_read_channel:
 
 Run as many in parallel as possible. If a channel returns no messages, skip it.
 
-## Step 4 — Catch any remaining missed mentions
 
-Run one final check:
-slack_search_public_and_private:
-- query: "<@U07P42N37HV>"
-- after: (today's date)
-- sort: timestamp, sort_dir: desc
-- limit: 20
+## Step 4 — Build the Action Required list
 
-Any result from the last 2 hours not already covered = add it to your findings.
+Go through all messages collected. Include in Action Required:
 
-## Step 5 — Classify everything you found
+- Any DM or group DM message **not sent by Menny** — these are all unread messages waiting on him
+- Any message in a channel that **directly @mentions Menny**
 
-Go through all messages collected. Classify each as:
+Exclude: bot/automated messages, Slacky DM summaries, Nooks alerts with no human follow-up, messages sent by Menny himself.
 
-- 🔴 **Action Required** — direct @mention of Menny, question directed at him, explicit ask/request for him to do something
-- 📣 **Need to Know** — deal updates, manager announcements, decisions made, new channels or deals, team priorities
-- 💬 **FYI** — general chatter, only include if truly notable
-
-Ignore: bot/automated messages, Slacky DM summaries, nooks alerts with no human follow-up.
-
-## Step 6 — Send the DM
+## Step 5 — Send the DM
 
 slack_send_message to U07P42N37HV:
 
-Slacky
+*Slacky*
 
 *🔴 Action Required*
 • [#channel-name] @person: "[what they asked]" → <permalink>
-
-*📣 Need to Know*
-• [#channel-name] summary of what happened
-
-*💬 Nothing else notable.*
----
 
 If zero activity across everything: send "🤖 All quiet on the Nilus front. Nothing to report."
 
