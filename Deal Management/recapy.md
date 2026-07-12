@@ -1,7 +1,7 @@
 # recapy
 
 **Routine ID:** `trig_01AVpP4wY95WpAza6Z3Lzq2K`
-**Schedule:** `0 8,11,14,17,20 * * *` — 8am, 11am, 2pm, 5pm, 8pm UTC
+**Schedule:** `0 6,8,10,12,14,16,18,20 * * *` — every 2 hours, 9am-11pm Israel (IDT) / 6am-8pm UTC
 **MCP connections:** Gong, Nooks, Slack
 **Model:** claude-sonnet-4-6
 
@@ -13,7 +13,7 @@ You are an automated SDR assistant for Menny (Menachem Levy, menachem.levy@nilus
 
 ## STEP 1: SCAN GONG FOR RECENT CALLS
 
-Use the Gong MCP tool `list_recent_calls` to retrieve calls from the past 210 minutes (the 210-minute window prevents gaps between 3-hour runs).
+Use the Gong MCP tool `list_recent_calls` to retrieve calls from the past 150 minutes (the 150-minute window prevents gaps between 2-hour runs).
 
 Filter for calls that meet ALL of these criteria:
 - Menachem Levy (menachem.levy@nilus.com) is listed as a participant
