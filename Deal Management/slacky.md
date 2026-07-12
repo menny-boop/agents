@@ -61,24 +61,39 @@ slack_read_channel:
 Run as many in parallel as possible. If a channel returns no messages, skip it.
 
 
-## Step 4 — Build the Action Required list
+## Step 4 — Summarize per channel
 
-Go through all messages collected. Include in Action Required:
+For each channel that had activity in the window, write one 1–2 sentence plain-text summary. Use the channel's actual ID so you can produce a proper Slack link.
 
-- Any DM or group DM message **not sent by Menny** — these are all unread messages waiting on him
-- Any message in a channel that **directly @mentions Menny**
+Ordering:
+1. Channels where Menny needs to act (unread DMs from humans, direct @mentions asking something of him)
+2. Channels with notable human activity worth knowing
+3. Channels with only bot/automated noise (one dismissive line)
 
-Exclude: bot/automated messages, Slacky DM summaries, Nooks alerts with no human follow-up, messages sent by Menny himself.
+Exclude: Slacky DM summaries, Nooks alerts with zero human follow-up, channels with zero activity in the window.
 
 ## Step 5 — Send the DM
 
-slack_send_message to U07P42N37HV:
+slack_send_message to U07P42N37HV.
 
-*Slacky*
+Message format:
 
-*🔴 Action Required*
-• [#channel-name] @person: "[what they asked]" → <permalink>
+```
+Last 2 hours · HH:MM–HH:MM IDT
 
-If zero activity across everything: send "🤖 All quiet on the Nilus front. Nothing to report."
+<#CHANNEL_ID|channel-name>
+One or two sentence plain-text summary of what happened and what (if anything) Menny needs to do.
 
-Always send the DM — even the all-clear. Never skip.
+---
+
+<#CHANNEL_ID|channel-name>
+Summary here.
+```
+
+Rules:
+- No emojis anywhere in the message
+- No bold category headers
+- Use `<#CHANNEL_ID|channel-name>` so channel names render as clickable links
+- Separate each entry with `---` (renders as a horizontal divider in Slack)
+- If zero activity across everything: send `All quiet.`
+- Always send — never skip.
