@@ -22,7 +22,7 @@ Store as `ninety_days_ago`.
 
 ## Step 2 — Discover every channel Menny belongs to
 
-Only use searches that confirm actual membership. Run ALL three in parallel and paginate each to get complete results:
+Only use searches that definitively confirm membership. Run both in parallel and paginate each to get complete results:
 
 **A — channels where Menny has posted (last 90 days):**
 slack_search_public_and_private:
@@ -32,15 +32,7 @@ slack_search_public_and_private:
 - sort: timestamp, sort_dir: desc, limit: 50
 Paginate through all pages.
 
-**B — channels where Menny was mentioned (last 90 days):**
-slack_search_public_and_private:
-- query: "<@U07P42N37HV>"
-- after: (ninety_days_ago)
-- channel_types: "public_channel,private_channel,im,mpim"
-- sort: timestamp, sort_dir: desc, limit: 50
-Paginate through all pages.
-
-**C — DMs involving Menny (last 90 days):**
+**B — DMs involving Menny (last 90 days):**
 slack_search_public_and_private:
 - query: "to:<@U07P42N37HV>"
 - after: (ninety_days_ago)
@@ -50,7 +42,7 @@ Paginate through all pages.
 
 Collect every unique channel ID and its name from all results. De-duplicate.
 
-**Do NOT include channels from keyword sweeps** — only channels confirmed by actual activity (Menny posted, was mentioned, or received a DM).
+**Do NOT use mention searches** (`<@U07P42N37HV>`) — Slack allows mentioning people outside a channel, so mentions do not confirm membership.
 
 ## Step 3 — Post the channel list to Menny's DM
 
