@@ -1,7 +1,7 @@
 # recapy
 
 **Routine ID:** `trig_01AVpP4wY95WpAza6Z3Lzq2K`
-**Schedule:** `0 6,8,10,12,14,16,18,20 * * *` — every 2 hours, 9am-11pm Israel (IDT) / 6am-8pm UTC
+**Schedule:** `0 6,8,10,12,14,16,18,20 * * 0-5` — every 2 hours, 9am-11pm Israel (IDT) / 6am-8pm UTC, Sunday-Friday
 **MCP connections:** Gong, Nooks, Slack
 **Model:** claude-sonnet-4-6
 
