@@ -23,17 +23,16 @@ Run these bash commands:
 
 Compute the window label in IDT (e.g. "09:00–11:00 IDT").
 
-## Step 2 — Load the channel list from channel-mapper
+## Step 2 — Build the channel list
 
-Search Menny's DM history for the most recent channel-mapper update:
+Search for channels Menny has posted in over the last 7 days:
 slack_search_public_and_private:
-- query: "SLACKY_CHANNEL_LIST"
-- channel_types: "im"
-- sort: timestamp, sort_dir: desc, limit: 1
+- query: "from:<@U07P42N37HV>"
+- channel_types: "public_channel,private_channel,im,mpim"
+- sort: timestamp, sort_dir: desc
+- limit: 50
 
-Parse every line after the `SLACKY_CHANNEL_LIST` header as `CHANNEL_ID|channel-name`. Extract the channel IDs. This is your channel list.
-
-**Fallback** (if no SLACKY_CHANNEL_LIST message is found): fall back to searching `from:<@U07P42N37HV>` and `<@U07P42N37HV>` over the last 7 days across all channel types, limit 50 each, and use those channel IDs instead.
+Paginate through all pages. For each message result, extract ONLY the channel ID from that message's own channel field. De-duplicate. This is your channel list.
 
 ## Step 3 — Read every channel for the last 2 hours
 
