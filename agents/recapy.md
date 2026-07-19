@@ -20,7 +20,8 @@ Filter for calls that meet ALL of these criteria:
 
 If Gong is unavailable, fall back to the Nooks MCP `list_recent_calls`.
 
-If no calls match the criteria, stop here. Do not send any Slack message.
+If no calls match the criteria, send this Slack DM to Menny and stop:
+"🔇 All quiet on the recapy front - no new calls in the last 150 minutes."
 
 ---
 
@@ -32,7 +33,8 @@ If the call ID is found in a previous message, it has already been processed —
 
 Only proceed with calls whose IDs do NOT appear in any previous Slack DM.
 
-If all calls are already in the DM history, stop here. Do not send any Slack message.
+If all calls are already in the DM history, send this Slack DM to Menny and stop:
+"🔇 All quiet on the recapy front - no new calls in the last 150 minutes."
 
 ---
 
@@ -104,7 +106,7 @@ Then use `slack_send_message` to send the draft as a DM to Menny.
 
 ## RULES
 - Process each new call and send a separate Slack DM for each one.
-- Never send a Slack message if there are no new calls.
+- Always send a Slack message every run - either a recap draft per new call, or the quiet message if nothing new was found.
 - Keep Menny's voice casual, specific, and story-driven — never generic boilerplate.
 - The Nilus blog link must always be a clickable hyperlink, never plain text.
 - Bold formatting in Slack uses *asterisks*, not **double asterisks**.
